@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRT模型网页化与实现</title>
+    <link rel="icon" href="./static/images/icon.png" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+  </head>
+  <body>
+    <h2>SRT模型网页化操作界面</h2>
+    <div id="container">
+      <form id="dataForm">
+        <fieldset>
+          <legend><b>NO.1 Canopy Info</b></legend>
+          <div id="form-group">
+            <div class="field">
+              <label for="i0">i0(0-1): </label>
+              <input name="i0" autofocus id="i0" required />
+            </div>
+            <div class="field">
+              <label for="SZA">SZA(degree): </label>
+              <input name="SZA" id="SZA" required />
+            </div>
+            <div class="field">
+              <label for="azimuth">azimuth(degree): </label>
+              <input name="azimuth" id="azimuth" required />
+            </div>
+            <div class="field">
+              <label for="TreeType">TreeType: </label>
+              <input name="treeType" id="TreeType" required />
+            </div>
+            <div class="field">
+              <label for="H">H: </label> <input name="H" id="H" required />
+            </div>
+            <div class="field">
+              <label for="D_L">D_L: </label>
+              <input name="D_L" id="D_L" required />
+            </div>
+            <div class="field">
+              <label for="diam">diam: </label>
+              <input name="diam" id="diam" required />
+            </div>
+            <div class="field">
+              <label for="VegCover">VegCover: </label>
+              <input name="vegCover" id="VegCover" required />
+            </div>
+            <div class="field">
+              <label for="HotSpot">HotSpot: </label>
+              <input name="hotspot" id="HotSpot" required />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><b>NO.2 Leaf and Soil Info</b></legend>
+          <div id="form-group">
+            <div class="field">
+              <label for="tau_L">tau_L: </label>
+              <input name="tau_L" id="tau_L" required />
+            </div>
+            <div class="field">
+              <label for="ro_L">ro_L: </label>
+              <input name="ro_L" id="ro_L" required />
+            </div>
+            <div class="field">
+              <label for="iorien">iorien: </label>
+              <input name="iorien" id="iorien" required />
+            </div>
+            <div class="field">
+              <label for="ro_Soil">ro_Soil: </label>
+              <input name="ro_Soil" id="ro_Soil" required />
+            </div>
+            <div class="field">
+              <label for="ifren">ifren: </label>
+              <input name="ifren" id="ifren" required />
+            </div>
+            <div class="field">
+              <label for="refind">refind: </label>
+              <input name="refind" id="refind" required />
+            </div>
+            <div class="field">
+              <label for="sk">sk: </label>
+              <input name="sk" id="sk" required />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><b>NO.3 Topography Info</b></legend>
+          <div id="form-group">
+            <div class="field">
+              <label for="Slope">Slope(degree): </label>
+              <input name="slope" id="Slope" required />
+            </div>
+            <div class="field">
+              <label for="Aspect">Aspect(degree): </label>
+              <input name="aspect" id="Aspect" required />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><b>NO.4 Configuration Para</b></legend>
+          <div id="form-group">
+            <div class="field">
+              <label for="NumberOfLayers">NumberOfLayers: </label>
+              <input name="numberOfLayers" id="NumberOfLayers" required />
+            </div>
+            <div class="field">
+              <label for="epsiter">epsiter: </label>
+              <input name="epsiter" id="epsiter" required />
+            </div>
+            <div class="field">
+              <label for="maxiter">maxiter: </label>
+              <input name="maxiter" id="maxiter" required />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><b>NO.5 View Angles</b></legend>
+          <div id="form-group">
+            <div class="field">
+              <label for="Total_Number">Total_Number: </label>
+              <input name="total_Number" id="Total_Number" required />
+            </div>
+            <div class="field">
+              <label for="CoordFlag">CoordFlag: </label>
+              <input name="coordFlag" id="CoordFlag" required />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><b>NO.6 Zenith and Azimuth</b></legend>
+          <div id="form-group">
+            <div class="field">
+              <label for="Zenith">Zenith Angles(max): </label>
+              <input name="zenith" id="Zenith" required />
+            </div>
+            <div class="field" style="padding: 8px 0;">
+              <label for="zenithInterval">Zenith Interval: </label>
+              <select name="zenithInterval" id="zenithInterval">
+                <option value="">--please select angle interval--</option>
+                <option value="5" selected>5°</option>
+                <option value="10">10°</option>
+                <option value="15">15°</option>
+                <option value="20">20°</option>
+                <option value="25">25°</option>
+              </select>
+            </div>
+            <div class="field" style="padding: 8px 0;">
+              <label for="azimuthInterval">Azimuth Interval: </label>
+              <select name="azimuthInterval" id="azimuthInterval">
+                <option value="">--please select angle interval--</option>
+                <option value="15">15°</option>
+                <option value="20">20°</option>
+                <option value="25">25°</option>
+                <option value="30" selected>30°</option>
+                <option value="45">45°</option>
+                <option value="60">60°</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <input type="submit" id="submitButton" value="Submit Data" />
+        <input type="reset" id="resetButton" value="Reset Data" />
+      </form>
+
+      <form id="figureForm">
+        <fieldset>
+          <legend><b>Result Figure</b></legend>
+          <img id="dataFigure" />
+        </fieldset>
+        <pre id="result" name="result"></pre>
+      </form>
+    </div>
+    <script src="./static/js/main.js"></script>
+  </body>
+</html>

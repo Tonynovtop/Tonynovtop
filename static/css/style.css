@@ -1,0 +1,93 @@
+body {
+  font-family: sans-serif;
+}
+h2 {
+  margin: 5px 0;
+  padding: 2px;
+  background-color: #f6f6f6;
+  width: auto;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 125%;
+}
+#container {
+  display: flex;
+}
+#form-group {
+  display: flex;
+  flex-flow: row wrap;
+}
+.field {
+  margin-right: 4px;
+}
+#dataForm {
+  flex: 1;
+  padding: 10px;
+  height: 100%;
+  background-color: #f6f6f6;
+  border-radius: 4px;
+  overflow: auto;
+}
+#dataForm > fieldset {
+  border-radius: 4px;
+  width: auto;
+  margin: auto;
+  font-size: 80%;
+}
+#figureForm {
+  flex: 1;
+  height: inherit;
+  padding: 10px;
+  background-color: #f6f6f6;
+  overflow: auto;
+  border-radius: 4px;
+}
+#figureForm > fieldset {
+  border-radius: 4px;
+  font-size: 80%;
+  height: 90%;
+}
+label {
+  margin-right: 2px;
+}
+input {
+  width: 115px;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+select {
+  width: 65px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  width: 100px;
+  margin-right: 15px;
+  cursor: pointer;
+  padding: 7px;
+}
+img {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+pre {
+  margin: auto;
+}
+#result {
+  font-size: inherit;
+  font-family: inherit;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 540px) {
+  #container {
+    flex-direction: column;
+  }
+}
